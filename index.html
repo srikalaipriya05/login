@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h1>Login</h1><br>
+        <label onkeypress="click(event)">Username</label><br><br>
+        <input type="text"><br><br>
+        <label>Password</label><br><br>
+        <input type="password"><br><br>
+        <button onclick="click(event)" id="btn">Sign In</button>
+    </div>
+    <img src="./drawkit.jpg" alt="draw" id="kit">
+    <img src="./icon.jpeg" alt="draw" id="icon">
+    </div>
+    <button id="add">+</button>
+    <h2 id="cou">counter</h2>
+    <button id="sub">-</button>
+    <script>
+        let clickBtn=document.querySelector('#btn');
+        console.log(clickBtn);
+        clickBtn.addEventListener("click",function(){
+            console.log("click");
+        })
+        let cout=document.querySelector('#cou')
+        let ad=document.querySelector("#add")
+        let su=document.querySelector("#sub")
+        console.log(ad);
+        let count=0;
+        ad.addEventListener("click",()=>{
+            count=count+1;
+            cout.innerText=count
+        })
+        su.addEventListener("click",()=>{
+            count=count-1;
+            cout.innerText=count;
+        })
+    </script>
+</body>
+</html>
